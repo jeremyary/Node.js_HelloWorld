@@ -1,10 +1,10 @@
-var server = require('server');
-var router = require('router');
-var requestHandlers = require('requestHandlers');
+var server = require('./custom_modules/server');
+var router = require('./custom_modules/router');
+var requestHandlers = require('./custom_modules/requestHandlers');
 
 var handle = {}
 handle['/'] = requestHandlers.list;
-handle['/addTask'] = requestHandlers.addTask;
-handle['/removeTask'] = requestHandlers.removeTask;
+handle['/add'] = requestHandlers.add;
+handle['/remove'] = requestHandlers.remove;
 
 server.start(router, handle);
