@@ -1,6 +1,6 @@
-var server = require('./custom_modules/server');
-var router = require('./custom_modules/router');
-var requestHandlers = require('./custom_modules/requestHandlers');
+var server = require('./server');
+var router = require('./router');
+var requestHandlers = require('./requestHandlers');
 
 var handle = {}
 handle['/'] = requestHandlers.list;
