@@ -10,8 +10,9 @@ function start(router, handle) {
     		router.route(handle, pathName, response);
   }
 
-  	http.createServer(onRequest).listen(8888);
-  	console.log("server now running on 8888");
+	var port = process.env.PORT || 3000;
+  	http.createServer(onRequest).listen(port);
+  	console.log("server now running on " + port);
 }
 
 exports.start = start;
